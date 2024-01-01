@@ -1,1 +1,1 @@
-pip install pytest testcontainers fastapi uvicorn
+pip install pytest testcontainers fastapi uvicorn httpx
