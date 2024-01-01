@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:__1__
+    ports:
+      - "__2__:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+    depends_on:
+      - __3__
+
+  db:
+    image: __4__:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: __5__
+      MYSQL_DATABASE: mydatabase
+    volumes:
+      - __6__:/var/lib/mysql
+
+volumes:
+  __6__:
